@@ -1,0 +1,23 @@
+/* Button variables */
+
+$default-button-font-size: 16px;
+$basic-size-padding: 12px 16px;
+$button-border-radius: 6px;
+
+$button-background-color: $main-color;
+$button-text-color: hsl(0, 0%, 100%);
+/********************/
+
+.ry-button {
+  display: flex;
+  padding: $basic-size-padding;
+  font-size: $default-button-font-size;
+  justify-content: center;
+  font-family: $text-font-stack;
+  font-weight: lighter;
+  font-style: normal;
+  background-color: $button-background-color;
+  border-radius: $button-border-radius;
+  border: none;
+  color: $button-text-color;
+}
