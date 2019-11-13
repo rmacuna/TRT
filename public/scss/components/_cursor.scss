@@ -1,0 +1,28 @@
+/* Cursor custom variables */
+
+$cursor-size: 35px;
+$cursor-border-width: 2px;
+$cursor-color: $main-color;
+
+/********************/
+
+.cursor {
+  position: absolute;
+  width: $cursor-size;
+  height: $cursor-size;
+  border-radius: 100%;
+  border: $cursor-border-width solid $cursor-color;
+  transition-duration: 200ms;
+  transition-timing-function: ease-out;
+
+  animation: cursorScale 0.8s infinite alternate;
+}
+
+@include keyframes(cursorScale) {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.8);
+  }
+}

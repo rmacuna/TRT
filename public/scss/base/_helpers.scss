@@ -53,3 +53,18 @@
   position: absolute;
   width: 1px;
 }
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.flex-block-vertical-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-full-height {
+  min-height: 100vh;
+}

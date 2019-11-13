@@ -15,17 +15,19 @@ $text-color: hsl(0, 0, 13.3%);
 
 //--- Brand colors-----
 
-$main-color: hsl(326, 97, 14);
+$main-color: hsl(195, 100%, 6%);
 
-$tint-color: hsl(0, 20, 10);
+$second-color: hsl(1, 100%, 68%);
 
-$success: hsl(0, 10, 10);
-
-$error: hsl(354, 73, 87);
+$tertiary-color: hsl(234, 64%, 26%);
 
 // ...Add more here
-
+// Colors
 // --------------- //
+
+$success: hsl(148, 100%, 29%);
+
+$error: hsl(1, 70%, 61%);
 
 /// Container's maximum width
 /// @type Length

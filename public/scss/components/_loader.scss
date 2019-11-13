@@ -1,0 +1,61 @@
+/* Loader variables */
+
+$spinner-width: 100px;
+$spinner-height: 100px;
+
+$spinner-color: hsl(0, 0, 0);
+$spinner-circle-width: 2px;
+
+/********************/
+
+.ry-spinner {
+  @extend .flex-block-vertical-center;
+  width: $spinner-width;
+  height: $spinner-height;
+  border-radius: 100%;
+  border: $spinner-circle-width solid $spinner-color;
+
+  animation: infiniteRotate 2s infinite linear;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 120%;
+    background-color: white;
+    height: 5px;
+    transform: rotate(90deg);
+    z-index: 1;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 120%;
+    background-color: white;
+    height: 5px;
+    z-index: 1;
+  }
+}
+
+#percentage {
+  z-index: 2;
+  animation: counterRotate 2s infinite linear;
+}
+
+@include keyframes(infiniteRotate) {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@include keyframes(counterRotate) {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
