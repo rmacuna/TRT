@@ -1,0 +1,11 @@
+.ry-app--wrapper {
+  width: 100%;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.row--items {
+  display: flex;
+  justify-content: space-between;
+}

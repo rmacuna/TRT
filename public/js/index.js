@@ -1,33 +1,25 @@
 const cursor = document.querySelector(".cursor");
 const percentageIndicator = document.getElementById("percentage");
+const modal = document.getElementById("modal-loader");
+// const anime = require("animejs");
+//---------- Loader animations ---------------//
 
-let increment = 100 > 0 ? 1 : -1;
-let stepTime = Math.abs(Math.floor(10000 / 100));
-let element = percentageIndicator;
-let current = 0;
-let end = 100;
-let timer = setInterval(function() {
-  current += increment;
-  element.innerHTML = current + "%";
-  if (current == end) {
-    clearInterval(timer);
-  }
-}, stepTime);
+// let increment = 100 > 0 ? 1 : -1;
+// let stepTime = Math.abs(Math.floor(7000 / 100));
+// let element = percentageIndicator;
+// let current = 0;
+// let end = 100;
+// let timer = setInterval(function() {
+//   current += increment;
+//   element.innerHTML = current + "%";
+//   if (current == end) {
+//     clearInterval(timer);
+//   }
+// }, stepTime);
 
-// function animateValue(id, start, end, duration) {
-//   const range = end - start;
-//   let current = start;
-//   let increment = end > start ? 1 : -1;
-//   let stepTime = Math.abs(Math.floor(duration / range));
-//   let obj = document.getElementById(id);
-//   let timer = setInterval(function() {
-//     current += increment;
-//     obj.innerHTML = current;
-//     if (current == end) {
-//       clearInterval(timer);
-//     }
-//   }, stepTime);
-// }
+// let loader = {
+//   charged: "0%"
+// };
 
 document.addEventListener("mousemove", e => {
   cursor.setAttribute(
@@ -35,3 +27,25 @@ document.addEventListener("mousemove", e => {
     "top: " + (e.pageY - 14) + "px; left: " + (e.pageX - 14) + "px;"
   );
 });
+
+// Mouse cursor animation
+
+// anime({
+//   targets: loader,
+//   charged: "100%",
+//   round: 1,
+//   duration: 8000,
+//   easing: "linear",
+//   update: function() {
+//     percentageIndicator.innerHTML = loader.charged;
+//   }
+// });
+
+setTimeout(() => {
+  modal.classList += " loader-fade";
+  setTimeout(() => {
+    modal.style.display = "none";
+  }, 2100);
+}, 7500);
+
+// --------------------------- //

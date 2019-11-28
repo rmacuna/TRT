@@ -58,13 +58,26 @@
   overflow: hidden;
 }
 
-.flex-block-vertical-center {
+.no-margin {
+  margin: 0;
+}
+
+.vertical-center {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.container-full-height {
+.full-height {
   min-height: 100vh;
+}
+
+.padding--extra-30 {
+  padding: 30px;
+}
+
+.fix-space {
+  margin-top: -20px;
+  margin-bottom: 60px;
 }

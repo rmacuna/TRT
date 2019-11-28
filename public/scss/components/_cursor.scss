@@ -2,7 +2,7 @@
 
 $cursor-size: 35px;
 $cursor-border-width: 2px;
-$cursor-color: $main-color;
+$cursor-color: $text-color;
 
 /********************/
 
@@ -16,6 +16,10 @@ $cursor-color: $main-color;
   transition-timing-function: ease-out;
 
   animation: cursorScale 0.8s infinite alternate;
+
+  @include for-size(phone-only) {
+    display: none;
+  }
 }
 
 @include keyframes(cursorScale) {

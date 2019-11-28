@@ -3,13 +3,16 @@
 $spinner-width: 100px;
 $spinner-height: 100px;
 
+$loader-message-size: 54px;
+$loader-message-color: hsl(0, 0, 0, 10%);
+
 $spinner-color: hsl(0, 0, 0);
 $spinner-circle-width: 2px;
 
 /********************/
 
 .ry-spinner {
-  @extend .flex-block-vertical-center;
+  @extend .vertical-center;
   width: $spinner-width;
   height: $spinner-height;
   border-radius: 100%;
@@ -37,6 +40,30 @@ $spinner-circle-width: 2px;
   }
 }
 
+#modal-loader {
+  overflow: hidden;
+}
+
+.loader-fade {
+  animation: fadeOut 1s ease-out;
+  opacity: 0;
+}
+
+.loading-message {
+  position: absolute;
+  font-size: $loader-message-size;
+  color: $loader-message-color;
+  font-weight: bold;
+  font-style: normal;
+  margin: 50px;
+  font-family: "Merriweather", serif;
+  font-style: italic;
+
+  @include for-size(phone-only) {
+    font-size: 25px;
+  }
+}
+
 #percentage {
   z-index: 2;
   animation: counterRotate 2s infinite linear;
@@ -57,5 +84,14 @@ $spinner-circle-width: 2px;
   }
   100% {
     transform: rotate(-360deg);
+  }
+}
+
+@include keyframes(fadeOut) {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }

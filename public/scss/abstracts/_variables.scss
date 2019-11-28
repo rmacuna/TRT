@@ -38,9 +38,11 @@ $max-width: 1180px !default;
 /// @prop {String} keys - Keys are identifiers mapped to a given length
 /// @prop {Map} values - Values are actual breakpoints expressed in pixels
 $breakpoints: (
-  "small": 320px,
-  "medium": 768px,
-  "large": 1024px
+  "phone-only": 575.98px,
+  "table-portrait-up": 768px,
+  "tablet-landscape-up": 992px,
+  "desktop-up": 1200px,
+  "big-desktop-up": 1800px
 ) !default;
 
 /// Relative or absolute URL where all assets are served from

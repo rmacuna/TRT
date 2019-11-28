@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script
+      src="https://kit.fontawesome.com/75c308835f.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="./css/main.css" />
     <title>TRT: The Royal Three</title>
   </head>
@@ -12,12 +16,48 @@
 
   <body class="body">
     <div class="cursor"></div>
-    <div class="container flex-block-vertical-center container-full-height">
+
+    <!-- First loader -->
+    <!-- <div id="modal-loader" class="container vertical-center full-height">
       <div class="ry-spinner">
         <span id="percentage">0%</span>
       </div>
+    </div> -->
+    <div class="container">
+      <span class="app--title">The royal three</span>
+      <section class="ry-app--wrapper ">
+        <h1 class="title title--size-big title--width-reduced ">
+          Welcome to the royal three
+        </h1>
+        <p class="fix-space">
+          Pick the website that you want to visit
+        </p>
+      </section>
+      <div class="row--items">
+        <div class="page--item">
+          <div class="item">
+            <h3>Page number one</h3>
+            <i class="fas fa-arrow-right"></i>
+          </div>
+        </div>
+        <div class="page--item">
+          <div class="item">
+            <h3>Page number two</h3>
+            <i class="fas fa-arrow-right"></i>
+          </div>
+        </div>
+        <div class="page--item">
+          <div class="item">
+            <h3>Page number three</h3>
+            <i class="fas fa-arrow-right"></i>
+          </div>
+        </div>
+      </div>
     </div>
 
+    <aside class="border-colored"></aside>
+
+    <script src="../node_modules/animejs/lib/anime.min.js"></script>
     <script src="./js/index.js"></script>
   </body>
 </html>

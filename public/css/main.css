@@ -8,6 +8,7 @@
  */
 /* Document
    ========================================================================== */
+@import url("https://fonts.googleapis.com/css?family=Merriweather:700i,900i&display=swap");
 html {
   font-family: sans-serif;
   /* 1 */
@@ -478,6 +479,15 @@ a:hover, a:active, a:focus {
   text-decoration: underline;
 }
 
+.border-colored {
+  width: 100%;
+  background-color: #ff5f5c;
+  min-height: 50px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
 /*
 
   Manrope it's a free-font, I'm going to attributethe author.
@@ -533,6 +543,55 @@ body {
   font-weight: normal;
 }
 
+.title {
+  font-family: "Manrope", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #222222;
+}
+
+.app--title {
+  position: absolute;
+  left: 0;
+  margin-left: 50px;
+  right: 0;
+  padding-top: 50px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.title--width-reduced {
+  max-width: 570px;
+}
+
+.title--size-big {
+  font-size: 60px;
+}
+
+@-webkit-keyframes fadeInOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-moz-keyframes fadeInOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeInOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 /**
  * Clear inner floats
  */
@@ -596,15 +655,41 @@ body {
   overflow: hidden;
 }
 
-.flex-block-vertical-center, .ry-spinner {
+.no-margin {
+  margin: 0;
+}
+
+.vertical-center, .ry-spinner {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.container-full-height {
+.full-height {
   min-height: 100vh;
+}
+
+.padding--extra-30 {
+  padding: 30px;
+}
+
+.fix-space {
+  margin-top: -20px;
+  margin-bottom: 60px;
+}
+
+.ry-app--wrapper {
+  width: 100%;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.row--items {
+  display: flex;
+  justify-content: space-between;
 }
 
 /* Button variables */
@@ -657,6 +742,31 @@ body {
   background-color: white;
   height: 5px;
   z-index: 1;
+}
+
+#modal-loader {
+  overflow: hidden;
+}
+
+.loader-fade {
+  animation: fadeOut 1s ease-out;
+  opacity: 0;
+}
+
+.loading-message {
+  position: absolute;
+  font-size: 54px;
+  color: rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+  font-style: normal;
+  margin: 50px;
+  font-family: "Merriweather", serif;
+  font-style: italic;
+}
+@media (max-width: 576px) {
+  .loading-message {
+    font-size: 25px;
+  }
 }
 
 #percentage {
@@ -712,6 +822,30 @@ body {
     transform: rotate(-360deg);
   }
 }
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-moz-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 /* Cursor custom variables */
 /********************/
 .cursor {
@@ -719,10 +853,15 @@ body {
   width: 35px;
   height: 35px;
   border-radius: 100%;
-  border: 2px solid #00171f;
+  border: 2px solid #222222;
   transition-duration: 200ms;
   transition-timing-function: ease-out;
   animation: cursorScale 0.8s infinite alternate;
+}
+@media (max-width: 576px) {
+  .cursor {
+    display: none;
+  }
 }
 
 @-webkit-keyframes cursorScale {

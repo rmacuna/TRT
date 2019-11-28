@@ -6,3 +6,36 @@ body {
   font: normal 125% / 1.4 $text-font-stack;
   font-weight: normal;
 }
+
+.title {
+  font-family: $text-font-stack, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: $text-color;
+}
+
+.app--title {
+  position: absolute;
+  left: 0;
+  margin-left: 50px;
+  right: 0;
+  padding-top: 50px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.title--width-reduced {
+  max-width: 570px;
+}
+.title--size-big {
+  font-size: 60px;
+}
+
+@include keyframes(fadeInOut) {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
