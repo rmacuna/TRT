@@ -2,5 +2,15 @@
   "editor.tabSize": 2,
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
-  "editor.trimAutoWhitespace": true
+  "editor.trimAutoWhitespace": true,
+  "sass.format.enabled": true,
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#161821",
+    "titleBar.activeBackground": "#161821",
+    "titleBar.activeForeground": "#F6FBFB",
+    "sideBar.background": "#161821",
+    "tab.inactiveBackground": "#161821",
+    "breadcrumb.background": "#161821",
+    "editorGroupHeader.tabsBackground": "#161821"
+  }
 }

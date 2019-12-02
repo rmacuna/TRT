@@ -8,7 +8,6 @@
  */
 /* Document
    ========================================================================== */
-@import url("https://fonts.googleapis.com/css?family=Merriweather:700i,900i&display=swap");
 html {
   font-family: sans-serif;
   /* 1 */
@@ -486,8 +485,33 @@ a:hover, a:active, a:focus {
   position: absolute;
   bottom: 0;
   left: 0;
+  animation: slideIn 0.3s linear;
 }
 
+@-webkit-keyframes slideIn {
+  0% {
+    transform: scaleX(0) translateY(30px);
+  }
+  100% {
+    transform: scaleX(1) translateY(0);
+  }
+}
+@-moz-keyframes slideIn {
+  0% {
+    transform: scaleX(0) translateY(30px);
+  }
+  100% {
+    transform: scaleX(1) translateY(0);
+  }
+}
+@keyframes slideIn {
+  0% {
+    transform: scaleX(0) translateY(30px);
+  }
+  100% {
+    transform: scaleX(1) translateY(0);
+  }
+}
 /*
 
   Manrope it's a free-font, I'm going to attributethe author.
@@ -534,30 +558,117 @@ a:hover, a:active, a:focus {
   font-weight: 700;
   font-style: normal;
 }
+@font-face {
+  font-family: "Gordita Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Gordita Regular"), url("../../../public/assets/fonts/Gordita Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Gordita Regular Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Gordita Regular Italic"), url("../../../public/assets/fonts/Gordita Regular Italic.woff") format("woff");
+}
+@font-face {
+  font-family: "Gordita Thin";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Gordita Thin"), url("../../../public/assets/fonts/Gordita Thin.woff") format("woff");
+}
+@font-face {
+  font-family: "Gordita Thin Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Gordita Thin Italic"), url("../../../public/assets/fonts/Gordita Thin Italic.woff") format("woff");
+}
+@font-face {
+  font-family: "Gordita Light";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Gordita Light"), url("../../../public/assets/fonts/Gordita Light.woff") format("woff");
+}
+@font-face {
+  font-family: "Gordita Light Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Gordita Light Italic"), url("../../../public/assets/fonts/Gordita Light Italic.woff") format("woff");
+}
+@font-face {
+  font-family: "Gordita Medium";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Gordita Medium"), url("../../../public/assets/fonts/Gordita Medium.woff") format("woff");
+}
+@font-face {
+  font-family: "Gordita Medium Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Gordita Medium Italic"), url("../../../public/assets/fonts/Gordita Medium Italic.woff") format("woff");
+}
+@font-face {
+  font-family: "Gordita Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Gordita Bold"), url("../../../public/assets/fonts/Gordita Bold.woff") format("woff");
+}
+@font-face {
+  font-family: "Gordita Bold Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Gordita Bold Italic"), url("../../../public/assets/fonts/Gordita Bold Italic.woff") format("woff");
+}
+@font-face {
+  font-family: "Gordita Black";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Gordita Black"), url("../../../public/assets/fonts/Gordita Black.woff") format("woff");
+}
+@font-face {
+  font-family: "Gordita Black Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Gordita Black Italic"), url("../../../public/assets/fonts/Gordita Black Italic.woff") format("woff");
+}
+@font-face {
+  font-family: "Gordita Ultra";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Gordita Ultra"), url("../../../public/assets/fonts/Gordita Ultra.woff") format("woff");
+}
+@font-face {
+  font-family: "Gordita Ultra Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Gordita Ultra Italic"), url("../../../public/assets/fonts/Gordita Ultra Italic.woff") format("woff");
+}
 /**
  * Basic typography style for copy text
  */
 body {
   color: #222222;
-  font: normal 125%/1.4 "Manrope", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font: normal 125%/1.4 "Gordita Regular", "Manrope", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-weight: normal;
 }
 
 .title {
-  font-family: "Manrope", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif, sans-serif;
-  font-weight: 700;
-  font-style: normal;
+  font-family: "Gordita Bold", sans-serif;
   color: #222222;
 }
 
 .app--title {
+  font-family: "Gordita Medium", sans-serif;
   position: absolute;
   left: 0;
-  margin-left: 50px;
+  margin-left: 12px;
   right: 0;
   padding-top: 50px;
   font-size: 18px;
   font-weight: bold;
+}
+
+.light-text {
+  color: white;
 }
 
 .title--width-reduced {
@@ -565,7 +676,17 @@ body {
 }
 
 .title--size-big {
-  font-size: 60px;
+  font-size: 75px;
+}
+@media (max-width: 576px) {
+  .title--size-big {
+    font-size: 40px;
+  }
+}
+@media (min-width: 577px) and (max-width: 869px) {
+  .title--size-big {
+    font-size: 60px;
+  }
 }
 
 @-webkit-keyframes fadeInOut {
@@ -620,6 +741,7 @@ body {
   /* 3 */
   width: 100%;
   /* 1 */
+  position: relative;
 }
 
 /**
@@ -679,6 +801,10 @@ body {
   margin-bottom: 60px;
 }
 
+.opaque {
+  opacity: 0;
+}
+
 .ry-app--wrapper {
   width: 100%;
   min-height: 500px;
@@ -686,10 +812,89 @@ body {
   flex-direction: column;
   justify-content: flex-end;
 }
+@media (max-width: 576px) {
+  .ry-app--wrapper {
+    min-height: 400px;
+  }
+}
 
 .row--items {
   display: flex;
   justify-content: space-between;
+}
+@media (max-width: 576px) {
+  .row--items {
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: -50px;
+  }
+}
+@media (min-width: 577px) and (max-width: 869px) {
+  .row--items {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
+
+.item {
+  display: flex;
+  align-items: center;
+}
+.item h3 {
+  flex: 0.9;
+}
+@media (max-width: 576px) {
+  .item h3 {
+    flex: 0.9;
+    font-size: 18px;
+  }
+}
+@media (min-width: 577px) and (max-width: 869px) {
+  .item h3 {
+    flex: 0.9;
+    font-size: 18px;
+  }
+}
+
+.page--item {
+  cursor: pointer;
+  position: relative;
+}
+
+.page--item-indicator {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #ff5f5c;
+  transition: transform 0.4s ease-out;
+  transform: scaleX(0.3);
+  transform-origin: 0% 50%;
+}
+
+.page--item:hover .page--item-indicator {
+  transform: scaleX(1);
+}
+
+.dots--container {
+  position: absolute;
+  right: 0;
+  margin: 50px;
+  height: 400px;
+  width: 400px;
+}
+@media (max-width: 576px) {
+  .dots--container {
+    margin: 0;
+    width: auto;
+    height: auto;
+  }
+}
+@media (min-width: 577px) and (max-width: 869px) {
+  .dots--container {
+    margin: 0;
+    width: auto;
+    height: auto;
+  }
 }
 
 /* Button variables */
@@ -699,7 +904,7 @@ body {
   padding: 12px 16px;
   font-size: 14px;
   justify-content: center;
-  font-family: "Manrope", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: "Gordita Regular", "Manrope", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-weight: lighter;
   font-style: normal;
   background-color: #00171f;
@@ -886,6 +1091,105 @@ body {
   }
   to {
     transform: scale(0.8);
+  }
+}
+.dots {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 360px;
+  transition: height flex-direction transform 0.3s;
+}
+@media (max-width: 576px) {
+  .dots {
+    height: 30%;
+    flex-direction: row;
+    transform: scale(0.8) rotate(120deg) translate(5px, -136px);
+  }
+}
+@media (min-width: 577px) and (max-width: 869px) {
+  .dots {
+    height: 30%;
+    flex-direction: row;
+    transform: scale(0.8) rotate(120deg) translate(5px, -136px);
+  }
+}
+
+.line {
+  width: 100%;
+  padding: 10px 0;
+}
+
+.circle {
+  border-radius: 50%;
+}
+.circle--shadow {
+  position: absolute;
+  opacity: 0.2;
+}
+
+.small {
+  width: 38px;
+  height: 38px;
+}
+@media (max-width: 576px) {
+  .small {
+    width: 18px;
+    height: 18px;
+  }
+}
+@media (min-width: 577px) and (max-width: 869px) {
+  .small {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.circle {
+  pointer-events: none;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1px;
+  background-color: #222222;
+  font-size: 14px;
+}
+@media (max-width: 576px) {
+  .circle {
+    font-size: 7px;
+  }
+}
+@media (min-width: 577px) and (max-width: 869px) {
+  .circle {
+    font-size: 12px;
+  }
+}
+
+@-webkit-keyframes floating {
+  from {
+    transform: translateY(-20px);
+  }
+  to {
+    transform: translateY(20px);
+  }
+}
+@-moz-keyframes floating {
+  from {
+    transform: translateY(-20px);
+  }
+  to {
+    transform: translateY(20px);
+  }
+}
+@keyframes floating {
+  from {
+    transform: translateY(-20px);
+  }
+  to {
+    transform: translateY(20px);
   }
 }
 

@@ -41,4 +41,14 @@ a {
   position: absolute;
   bottom: 0;
   left: 0;
+  animation: slideIn 0.3s linear;
+}
+
+@include keyframes(slideIn) {
+  0% {
+    transform: scaleX(0) translateY(30px);
+  }
+  100% {
+    transform: scaleX(1) translateY(0);
+  }
 }

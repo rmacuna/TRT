@@ -14,7 +14,7 @@
 
   <!-- Feel free to modify this template if you want.  -->
 
-  <body class="body">
+  <body class="body no-scroll">
     <div class="cursor"></div>
 
     <!-- First loader -->
@@ -24,33 +24,62 @@
       </div>
     </div> -->
     <div class="container">
-      <span class="app--title">The royal three</span>
-      <section class="ry-app--wrapper ">
-        <h1 class="title title--size-big title--width-reduced ">
+      <span class="app--title  opaque el">The royal three</span>
+      <div class="dots--container">
+        <div class="dots square--dots-values">
+          <div class="line">
+            <div class="circle--shadow small"></div>
+            <div data-x="170" class="circle small el">
+              <h1 class="title light-text">T</h1>
+            </div>
+          </div>
+          <div class="line">
+            <div class="circle--shadow small"></div>
+            <div data-x="170" class="circle small el">
+              <h1 class="title light-text">R</h1>
+            </div>
+          </div>
+          <div class="line">
+            <div class="circle--shadow small"></div>
+            <div data-x="170" class="circle small el">
+              <h1 class="title light-text">T</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="ry-app--wrapper function-based-params ">
+        <h1
+          style="transform: translateY(-100px);"
+          class="title title--size-big opaque title--width-reduced el"
+        >
           Welcome to the royal three
         </h1>
-        <p class="fix-space">
+        <p class="fix-space opaque el">
           Pick the website that you want to visit
         </p>
       </section>
-      <div class="row--items">
-        <div class="page--item">
+      <div class="row--items function--row-animated">
+        <div class="page--item opaque el">
           <div class="item">
             <h3>Page number one</h3>
             <i class="fas fa-arrow-right"></i>
           </div>
+
+          <span class="page--item-indicator"></span>
         </div>
-        <div class="page--item">
+        <div class="page--item opaque el ">
           <div class="item">
             <h3>Page number two</h3>
             <i class="fas fa-arrow-right"></i>
           </div>
+          <span class="page--item-indicator"></span>
         </div>
-        <div class="page--item">
+        <div class="page--item opaque el">
           <div class="item">
             <h3>Page number three</h3>
             <i class="fas fa-arrow-right"></i>
           </div>
+          <span class="page--item-indicator"></span>
         </div>
       </div>
     </div>
@@ -58,6 +87,7 @@
     <aside class="border-colored"></aside>
 
     <script src="../node_modules/animejs/lib/anime.min.js"></script>
+    <script src="./js/animations.js"></script>
     <script src="./js/index.js"></script>
   </body>
 </html>

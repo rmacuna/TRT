@@ -68,3 +68,11 @@
     }
   }
 }
+
+$trt-fails-with-text: 870px;
+
+@mixin DotsFails {
+  @media (min-width: 577px) and  (max-width: #{$trt-fails-with-text - 1px}) {
+    @content;
+  }
+}
