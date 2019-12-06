@@ -1,0 +1,40 @@
+.ry__offer__banner {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 300px;
+  background: url("../assets/images/modern_minimal_design.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 300px;
+  border-radius: 25px;
+  margin: 35px;
+}
+
+// .offer__image {
+//   max-width: 100%;
+//   width: 250px;
+//   height: auto;
+//   margin-left: auto;
+//   margin-right: auto;
+//   animation: floating 1s infinite alternate;
+//   margin-top: -100px;
+// }
+
+// .banner__offer {
+//   font-family: "Gordita Medium";
+//   font-size: 18px;
+//   margin-bottom: 4px;
+// }
+
+// @include keyframes(floating) {
+//   0% {
+//     transform: translateY(-10px);
+//   }
+
+//   100% {
+//     transform: translateY(10px);
+//   }
+// }

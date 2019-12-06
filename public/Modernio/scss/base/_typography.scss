@@ -1,0 +1,38 @@
+/**
+ * Basic typography style for copy text
+ */
+body {
+  color: $text-color;
+  font: normal 105% / 1.4 $text-font-stack;
+  font-weight: normal;
+}
+
+.title {
+  font-family: "Gordita Bold", sans-serif;
+  color: $text-color;
+}
+
+.modernio--title {
+  font-family: "Gordita Medium", sans-serif;
+  font-size: 75px;
+}
+.modernio--title-small__margin {
+  margin-bottom: -10px;
+}
+.modernio--subtitle {
+  font-family: "Gordita Regular", sans-serif;
+  font-size: 16px;
+}
+
+.light-text {
+  color: white;
+}
+.title--width-reduced {
+  max-width: 570px;
+}
+.title--size-big {
+  font-size: 75px;
+  @include for-size(phone-only) {
+    font-size: 40px;
+  }
+}

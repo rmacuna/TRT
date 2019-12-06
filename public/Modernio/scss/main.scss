@@ -1,4 +1,5 @@
 @charset 'UTF-8';
+
 // Configuration and helpers
 @import "abstracts/variables";
 
@@ -15,4 +16,10 @@
 @import "base/helpers";
 
 // 4. Layout-related sections
+@import "layout/navbar";
 @import "layout/footer";
+@import "layout/wrappers";
+@import "layout/grid";
+// 5. Components
+@import "components/button";
+@import "components/offer-banner";
