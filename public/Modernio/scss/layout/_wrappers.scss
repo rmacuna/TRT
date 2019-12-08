@@ -5,20 +5,54 @@
   flex-direction: column;
   min-height: 100vh;
 }
+.wrapper--margin-big {
+  margin-top: 20%;
+}
 
+.modernio--separator {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 50vh;
+}
+
+.modernio--separator,
+.separator--size-big {
+  min-height: 90vh;
+}
+
+.separator--stats {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.separator--color-black {
+  background-color: black;
+}
 .background--container-furnitureHd {
   display: block;
   flex: 1;
   height: 100%;
   max-width: 100%;
+  transition: background 0.3s cubic-bezier(1, 0, 0, 1);
+}
 
-  // Compressed image
-  // background: linear-gradient(0deg, rgba(0, 0, 0, 0.93) 0%, rgba(0, 0, 0, 0) 100%),
-  //   url(../assets/images/background-modernio-2.jpg) no-repeat center center fixed;
-
-  // No gradient
-
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.93) 0%, rgba(0, 0, 0, 0) 100%),
+.wrapper--width-strecth {
+  max-width: 50%;
+}
+.modernio--background-1 {
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.93) 0%,
+      rgba(0, 0, 0, 0) 100%
+    ),
     url(../assets/images/red-bedroom.jpeg) no-repeat center center fixed;
 
   // background: url(../assets/images/red-bedroom.jpeg) no-repeat center center fixed;
@@ -27,7 +61,29 @@
   -o-background-size: cover;
   background-size: cover;
 }
+.modernio--background-2 {
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.93) 0%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url("../assets/images/modern_minimal_design.jpg") no-repeat center center
+      fixed;
 
+  // background: url(../assets/images/red-bedroom.jpeg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.modernio--background-3 {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%),
+    url("../assets/images/home-dark.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 .modernio--bottom__wrapper {
   flex: 0.1;
   padding: 10px 57px;
@@ -36,17 +92,28 @@
 .modernio--wrapper__dual {
   display: flex;
 }
-.modernio--wrapper__item,
-.wrapper__item-left {
-  padding-top: 100px;
-  flex: 0.6;
+.modernio--wrapper__item {
+  padding-top: 40px;
 }
 
-.ry__sidebar--wrapper {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100vh;
-  width: 90px;
-  background: rgba(0, 0, 0, 0.7);
+.wrapper__item-left {
+  flex: 1;
+}
+.wrapper__item-right {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
+}
+
+.modernio--wrapper__furnitures {
+  background-color: black;
+}
+
+@include keyframes(imageSize) {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
 }

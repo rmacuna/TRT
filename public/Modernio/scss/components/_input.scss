@@ -1,0 +1,28 @@
+.ry__input {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+
+  .label {
+    font-family: "Gordita Medium", sans-serif;
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 14px;
+    margin: 2px;
+  }
+  input {
+    font-family: "Gordita Regular", sans-serif;
+    border: none;
+    background: none;
+    outline: none;
+    flex: 0.9;
+    background-color: rgba(248, 248, 248, 1);
+    border-radius: 6px;
+    font-size: 14px;
+    padding: 16px 10px;
+    &::placeholder {
+      font-family: "Gordita Regular", sans-serif;
+      font-size: 12px;
+      color: rgba(0, 0, 0, 0.4);
+    }
+  }
+}

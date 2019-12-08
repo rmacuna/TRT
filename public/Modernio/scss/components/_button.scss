@@ -6,14 +6,35 @@
   font-family: "Gordita Medium", sans-serif;
   font-size: 16px;
   line-height: 1.5em;
+  transition: background-color 0.3s ease-out, color 0.3s ease-out;
 }
 
 .button--primary {
   background-color: $main-color;
   color: white;
-  transition: background-color 0.3s ease-out;
   &:hover {
     background-color: darken($main-color, 10);
+  }
+}
+
+.button--light {
+  background-color: white;
+  color: black;
+}
+
+.button--style-outline {
+  background: none;
+  border: 1px solid;
+}
+
+.button--light,
+.button--style-outline {
+  background-color: none;
+  border-color: white;
+  color: white;
+  &:hover {
+    background-color: white;
+    color: black;
   }
 }
 

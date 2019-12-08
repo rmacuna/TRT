@@ -54,13 +54,25 @@
   position: absolute;
   width: 1px;
 }
-
+.push__top-40 {
+  margin-top: 40px;
+}
 .no-scroll {
   overflow: hidden;
 }
 
 .no-margin {
   margin: 0;
+}
+
+.centered-text {
+  text-align: center;
+}
+.separator__margin--bottom-10 {
+  margin-bottom: 10px;
+}
+.separator__margin--right-10 {
+  margin-right: 10px;
 }
 
 .vertical-center {

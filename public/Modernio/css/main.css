@@ -583,18 +583,74 @@ body {
   color: #222222;
 }
 
+.supertitle {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 80px;
+  margin: 0;
+  font-family: "Gordita Bold", sans-serif;
+  color: rgba(0, 0, 0, 0.2);
+}
+
 .modernio--title {
   font-family: "Gordita Medium", sans-serif;
   font-size: 75px;
 }
 
+.title--width-strech {
+  font-size: 45px;
+}
+
+.paragraph {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 100%;
+}
+
+.paragraph--width-strech {
+  max-width: 80%;
+}
+
 .modernio--title-small__margin {
   margin-bottom: -10px;
+  max-width: 90%;
 }
 
 .modernio--subtitle {
   font-family: "Gordita Regular", sans-serif;
   font-size: 16px;
+}
+
+.stats--title {
+  font-size: 220px;
+  font-family: "Gordita Medium";
+  color: #fff;
+}
+
+.stats--paragraph {
+  font-size: 21px;
+  text-align: center;
+  padding: 0 12px;
+  max-width: 50%;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.stats--title,
+.stats--title-year {
+  color: rgba(250, 250, 250, 0.7);
+  margin-bottom: -40px;
+  margin-top: -40px;
+}
+
+.stats--subtitle {
+  font-size: 30px;
+  font-family: "Gordita Regular";
+}
+
+.title--width-medium {
+  font-size: 140px;
 }
 
 .light-text {
@@ -674,12 +730,28 @@ body {
   width: 1px;
 }
 
+.push__top-40 {
+  margin-top: 40px;
+}
+
 .no-scroll {
   overflow: hidden;
 }
 
 .no-margin {
   margin: 0;
+}
+
+.centered-text {
+  text-align: center;
+}
+
+.separator__margin--bottom-10 {
+  margin-bottom: 10px;
+}
+
+.separator__margin--right-10 {
+  margin-right: 10px;
 }
 
 .vertical-center {
@@ -841,12 +913,68 @@ nav.ry__navbar {
   min-height: 100vh;
 }
 
+.wrapper--margin-big {
+  margin-top: 20%;
+}
+
+.modernio--separator {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 50vh;
+}
+
+.modernio--separator,
+.separator--size-big {
+  min-height: 90vh;
+}
+
+.separator--stats {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.separator--color-black {
+  background-color: black;
+}
+
 .background--container-furnitureHd {
   display: block;
   flex: 1;
   height: 100%;
   max-width: 100%;
+  transition: background 0.3s cubic-bezier(1, 0, 0, 1);
+}
+
+.wrapper--width-strecth {
+  max-width: 50%;
+}
+
+.modernio--background-1 {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.93) 0%, rgba(0, 0, 0, 0) 100%), url(../assets/images/red-bedroom.jpeg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.modernio--background-2 {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.93) 0%, rgba(0, 0, 0, 0) 100%), url("../assets/images/modern_minimal_design.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.modernio--background-3 {
+  background: linear-gradient(0deg, black 0%, rgba(0, 0, 0, 0) 100%), url("../assets/images/home-dark.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -862,19 +990,63 @@ nav.ry__navbar {
   display: flex;
 }
 
-.modernio--wrapper__item,
-.wrapper__item-left {
-  padding-top: 100px;
-  flex: 0.6;
+.modernio--wrapper__item {
+  padding-top: 40px;
 }
 
-.ry__sidebar--wrapper {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100vh;
-  width: 90px;
-  background: rgba(0, 0, 0, 0.7);
+.wrapper__item-left {
+  flex: 1;
+}
+
+.wrapper__item-right {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
+}
+
+.modernio--wrapper__furnitures {
+  background-color: black;
+}
+
+@-webkit-keyframes imageSize {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+@-moz-keyframes imageSize {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+@keyframes imageSize {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+.ry__row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.ry__col {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+.fullwidth {
+  flex-basis: 100%;
 }
 
 .modernio--row-two__items {
@@ -893,15 +1065,37 @@ nav.ry__navbar {
   font-family: "Gordita Medium", sans-serif;
   font-size: 16px;
   line-height: 1.5em;
+  transition: background-color 0.3s ease-out, color 0.3s ease-out;
 }
 
 .button--primary {
   background-color: #b0363a;
   color: white;
-  transition: background-color 0.3s ease-out;
 }
 .button--primary:hover {
   background-color: #892a2d;
+}
+
+.button--light {
+  background-color: white;
+  color: black;
+}
+
+.button--style-outline {
+  background: none;
+  border: 1px solid;
+}
+
+.button--light,
+.button--style-outline {
+  background-color: none;
+  border-color: white;
+  color: white;
+}
+.button--light:hover,
+.button--style-outline:hover {
+  background-color: white;
+  color: black;
 }
 
 .button--size-big {
@@ -914,19 +1108,131 @@ nav.ry__navbar {
   font-size: 14px;
 }
 
-.ry__offer__banner {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 300px;
-  background: url("../assets/images/modern_minimal_design.jpg") no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  height: 300px;
-  border-radius: 25px;
-  margin: 35px;
+.ry__card {
+  position: relative;
+  margin: 2px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  max-width: 100%;
+  min-height: 550px;
+  width: 500px;
+  margin-right: -50px;
+}
+
+.ry__card--header {
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 auto;
+  padding: 12px 20px;
+}
+
+.header--title {
+  font-family: "Gordita Medium", sans-serif;
+  font-size: 24px;
+  max-width: 280px;
+  margin-top: -15px;
+  line-height: 127.1%;
+}
+
+.header--subtitle {
+  font-family: "Gordita Medium", sans-serif;
+  font-size: 14px;
+  max-width: 280px;
+}
+
+.ry__card--body {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 20px;
+}
+
+.ry__card--footer {
+  display: flex;
+  padding: 25px 20px;
+  justify-content: flex-end;
+}
+
+.steper {
+  position: relative;
+  margin-top: 80px;
+  display: flex;
+}
+
+.steper--step {
+  width: 50px;
+  height: 50px;
+  border: 1px solid white;
+  border-radius: 100%;
+  color: white;
+  font-size: 14px;
+  font-family: "Gordita Bold", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-right: 25px;
+  transition: background-color 0.3s linear;
+}
+.steper--step:hover {
+  background-color: white;
+  color: black;
+}
+
+.steper--step-active {
+  background-color: white;
+  color: black;
+}
+
+.ry__input {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+.ry__input .label {
+  font-family: "Gordita Medium", sans-serif;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 14px;
+  margin: 2px;
+}
+.ry__input input {
+  font-family: "Gordita Regular", sans-serif;
+  border: none;
+  background: none;
+  outline: none;
+  flex: 0.9;
+  background-color: #f8f8f8;
+  border-radius: 6px;
+  font-size: 14px;
+  padding: 16px 10px;
+}
+.ry__input input::placeholder {
+  font-family: "Gordita Regular", sans-serif;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.image__home--size-responsive {
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.image--size-medium {
+  max-width: 80%;
+}
+
+.image--size-bigger {
+  max-width: 120%;
+  width: 120%;
+}
+
+.image--alignment-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*# sourceMappingURL=main.css.map */

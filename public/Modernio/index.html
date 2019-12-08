@@ -14,7 +14,10 @@
   <body>
     <main>
       <div class="modernio--wrapper">
-        <div class="background--container-furnitureHd">
+        <div
+          id="animBackground"
+          class="background--container-furnitureHd modernio--background-1"
+        >
           <!-- <div class="ry__sidebar--wrapper"></div> -->
           <!-- Mobile Nav Only -->
           <!-- <div></div> -->
@@ -36,10 +39,10 @@
               </div>
               <ul class="ry__navbar--items">
                 <li class="ry__navbar--item">
-                  Home
+                  Login
                 </li>
                 <li class="ry__navbar--item">
-                  Products
+                  Register
                 </li>
                 <li class="ry__navbar--item">
                   Contact
@@ -68,37 +71,186 @@
                     Go to the catalog
                   </button>
                 </section>
+
+                <div class="steper">
+                  <div class="steper--step steper--step-active">1</div>
+                  <div class="steper--step ">2</div>
+                </div>
               </div>
-              <div class="modernio--container-right"></div>
+              <div class="modernio--wrapper__item wrapper__item-right">
+                <div class="ry__card">
+                  <section class="ry__card--header">
+                    <h4 class="header--subtitle color--main">Welcome</h4>
+                    <h1 class="header--title">
+                      Create an account and get discounts
+                    </h1>
+                  </section>
+                  <div class="ry__card--body">
+                    <div class="ry__row separator__margin--bottom-10">
+                      <div class="ry__input">
+                        <span class="label">Email</span>
+
+                        <input placeholder="example@example.com" type="text" />
+                      </div>
+                    </div>
+                    <div class="ry__row separator__margin--bottom-10">
+                      <div class="ry__col separator__margin--right-10">
+                        <div class="ry__input">
+                          <span class="label">Name</span>
+
+                          <input placeholder="Jhon Doe" type="text" />
+                        </div>
+                      </div>
+                      <div class="ry__col">
+                        <div class="ry__input">
+                          <span class="label">Last Name</span>
+                          <input placeholder="NoNickname" type="text" />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="ry__row ">
+                      <div
+                        class="ry__col fullwidth separator__margin--bottom-10"
+                      >
+                        <div class="ry__input">
+                          <span class="label">Password</span>
+                          <input
+                            type="password"
+                            placeholder="Try a secure one"
+                            type="text"
+                          />
+                        </div>
+                      </div>
+                      <div class="ry__col">
+                        <div class="ry__input">
+                          <span class="label">Confirm Password</span>
+                          <input
+                            placeholder="Repeat your password"
+                            type="password"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="ry__card--footer ">
+                    <button
+                      class="ry__button button--primary button--size-small"
+                    >
+                      Create account
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="modernio--separator separator--size-big separator--color-black "
+      >
+        <section class="separator--stats">
+          <h4 class="stats--subtitle color--white">This year</h4>
+          <h1 class="stats--title stats--title-year">2019</h1>
+          <p class="stats--paragraph">
+            This year we helped 200+ people to find the perfect design for their
+            home. We are so grateful because you trust in us this year
+          </p>
+        </section>
+      </div>
+
+      <div class="modernio--wrapper modernio--wrapper__products">
+        <div class="container">
+          <div class="modernio--wrapper__dual wrapper--margin-big">
+            <div class="modernio--wrapper__item ">
+              <h1 class="modernio--title title--width-strech">
+                The best of a design is the concept
+              </h1>
+              <p class="paragraph paragraph--width-strech">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Numquam eaque et saepe nulla doloremque libero pariatur, animi
+                velit rem quod sint labore eligendi delectus natus quisquam hic
+                eveniet harum quos!
+              </p>
+              <button class="ry__button button--primary button--size-big">
+                Get this product
+              </button>
+              <h1 class="supertitle supertitle--color-opaque">
+                Modern
+              </h1>
+            </div>
+
+            <div class="modernio--wrapper__item image--alignment-center">
+              <!-- <img
+                id="oldConcept"
+                class="image__home--size-responsive image--size-medium  "
+                src="assets/images/chair.png"
+                alt=""
+              /> -->
+              <img
+                id="modernConcept"
+                class="image__home--size-responsive image--size-bigger "
+                src="assets/images/Modern_chair.png"
+                alt=""
+              />
             </div>
           </div>
 
-          <div class="ry__offer__banner">
-            <!-- <div class="banner--header">
+          <div class="modernio--wrapper-dual modernio--wrapper__item"></div>
+        </div>
+      </div>
+
+      <div class="modernio--wrapper modernio--wrapper__products">
+        <div class="container">
+          <div class="modernio--wrapper__dual wrapper--margin-big">
+            <div class="modernio--wrapper__item ">
+              <h1 class="modernio--title title--width-strech">
+                Have you ever dream a house like this?
+              </h1>
+              <p class="paragraph paragraph--width-strech">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Numquam eaque et saepe nulla doloremque libero pariatur, animi
+                velit rem quod sint labore eligendi delectus natus quisquam hic
+                eveniet harum quos!
+              </p>
+            </div>
+
+            <div class="modernio--wrapper__item image--alignment-center">
               <img
-                class="offer__image"
-                src="assets/images/chair.png"
-                alt="ChairModern"
+                id="oldConcept"
+                class="image__home--size-responsive  "
+                src="assets/images/modern-house.jpg"
+                alt=""
               />
             </div>
-            <span class="banner__offer color--main">50% Off </span>
-            <section>
-              <h3 class="modernio--subtitle">Chair with brown decorations</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
-                voluptates, soluta aliquid asperiores nam commodi? Aut,
-              </p>
-            </section> -->
-            <!-- <div class="modernio--row-two__items">
-              <button class="ry__button button--size-small">View Item</button>
-              <button class="ry__button button--size-small button--primary">
-                Add to Cart
-              </button>
-            </div> -->
           </div>
         </div>
-        <!-- <div class="modernio--bottom__wrapper"></div> -->
+      </div>
+
+      <div class="modernio--wrapper  modernio--background-3 vertical-center">
+        <div class="container vertical-center">
+          <section class="separator--stats">
+            <h1
+              class="stats--title title--width-medium centered-text color--white"
+            >
+              Want to have an indoor design?
+            </h1>
+            <p class="stats--paragraph">
+              We also have designers to make you dream house.
+            </p>
+          </section>
+          <button
+            class="ry__button button--light button--size-big button--style-outline "
+          >
+            Ask for a design
+          </button>
+        </div>
       </div>
     </main>
+
+    <script src="./../../node_modules/animejs/lib/anime.min.js"></script>
+    <script src="./js/animations.js"></script>
   </body>
 </html>
