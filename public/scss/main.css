@@ -74,7 +74,8 @@ figure {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   /* 1 */
   height: 0;
   /* 1 */
@@ -124,7 +125,8 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -278,9 +280,9 @@ select {
  * 2. Correct the inability to style clickable types in iOS and Safari.
  */
 button,
-html [type=button],
-[type=reset],
-[type=submit] {
+html [type="button"],
+[type="reset"],
+[type="submit"] {
   -webkit-appearance: button;
   /* 2 */
 }
@@ -289,9 +291,9 @@ html [type=button],
  * Remove the inner border and padding in Firefox.
  */
 button::-moz-focus-inner,
-[type=button]::-moz-focus-inner,
-[type=reset]::-moz-focus-inner,
-[type=submit]::-moz-focus-inner {
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -300,9 +302,9 @@ button::-moz-focus-inner,
  * Restore the focus styles unset by the previous rule.
  */
 button:-moz-focusring,
-[type=button]:-moz-focusring,
-[type=reset]:-moz-focusring,
-[type=submit]:-moz-focusring {
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -322,7 +324,8 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   /* 1 */
   color: inherit;
   /* 2 */
@@ -358,9 +361,10 @@ textarea {
  * 1. Add the correct box sizing in IE 10-.
  * 2. Remove the padding in IE 10-.
  */
-[type=checkbox],
-[type=radio] {
-  box-sizing: border-box;
+[type="checkbox"],
+[type="radio"] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */
@@ -369,8 +373,8 @@ textarea {
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
-[type=number]::-webkit-inner-spin-button,
-[type=number]::-webkit-outer-spin-button {
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -378,7 +382,7 @@ textarea {
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
  */
-[type=search] {
+[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
   outline-offset: -2px;
@@ -388,8 +392,8 @@ textarea {
 /**
  * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
  */
-[type=search]::-webkit-search-cancel-button,
-[type=search]::-webkit-search-decoration {
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -451,7 +455,8 @@ template {
  * Set up a decent box model on the root element
  */
 html {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 /**
@@ -463,7 +468,8 @@ html {
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
 
 /**
@@ -473,6 +479,7 @@ a {
   color: #00171f;
   text-decoration: none;
 }
+
 a:hover, a:active, a:focus {
   color: #222222;
   text-decoration: underline;
@@ -485,34 +492,33 @@ a:hover, a:active, a:focus {
   position: absolute;
   bottom: 0;
   left: 0;
-  animation: slideIn 0.3s linear;
+  -webkit-animation: slideIn 0.3s linear;
+          animation: slideIn 0.3s linear;
   padding: 20px;
 }
 
 @-webkit-keyframes slideIn {
   0% {
-    transform: scaleX(0) translateY(30px);
+    -webkit-transform: scaleX(0) translateY(30px);
+            transform: scaleX(0) translateY(30px);
   }
   100% {
-    transform: scaleX(1) translateY(0);
+    -webkit-transform: scaleX(1) translateY(0);
+            transform: scaleX(1) translateY(0);
   }
 }
-@-moz-keyframes slideIn {
-  0% {
-    transform: scaleX(0) translateY(30px);
-  }
-  100% {
-    transform: scaleX(1) translateY(0);
-  }
-}
+
 @keyframes slideIn {
   0% {
-    transform: scaleX(0) translateY(30px);
+    -webkit-transform: scaleX(0) translateY(30px);
+            transform: scaleX(0) translateY(30px);
   }
   100% {
-    transform: scaleX(1) translateY(0);
+    -webkit-transform: scaleX(1) translateY(0);
+            transform: scaleX(1) translateY(0);
   }
 }
+
 .text--color-white {
   color: #fff;
 }
@@ -523,7 +529,7 @@ a:hover, a:active, a:focus {
 
   Author: Michael Saranda
   Description: OTF, TTF, WEB fonts
-
+  
   Version: 2.000
   Amount of glyphs: 488
   Published: 01/07/2018
@@ -539,114 +545,133 @@ a:hover, a:active, a:focus {
   font-weight: 300;
   font-style: normal;
 }
+
 @font-face {
   font-family: "Manrope";
   src: url("../../../public/assets/fonts/manrope-regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
+
 @font-face {
   font-family: "Manrope";
   src: url("../../../public/assets/fonts/manrope-medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
+
 @font-face {
   font-family: "Manrope";
   src: url("../../../public/assets/fonts/manrope-semibold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
 }
+
 @font-face {
   font-family: "Manrope";
   src: url("../../../public/assets/fonts/manrope-bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
+
 @font-face {
   font-family: "Gordita Regular";
   font-style: normal;
   font-weight: normal;
   src: local("Gordita Regular"), url("../../../public/assets/fonts/Gordita Regular.woff") format("woff");
 }
+
 @font-face {
   font-family: "Gordita Regular Italic";
   font-style: normal;
   font-weight: normal;
   src: local("Gordita Regular Italic"), url("../../../public/assets/fonts/Gordita Regular Italic.woff") format("woff");
 }
+
 @font-face {
   font-family: "Gordita Thin";
   font-style: normal;
   font-weight: normal;
   src: local("Gordita Thin"), url("../../../public/assets/fonts/Gordita Thin.woff") format("woff");
 }
+
 @font-face {
   font-family: "Gordita Thin Italic";
   font-style: normal;
   font-weight: normal;
   src: local("Gordita Thin Italic"), url("../../../public/assets/fonts/Gordita Thin Italic.woff") format("woff");
 }
+
 @font-face {
   font-family: "Gordita Light";
   font-style: normal;
   font-weight: normal;
   src: local("Gordita Light"), url("../../../public/assets/fonts/Gordita Light.woff") format("woff");
 }
+
 @font-face {
   font-family: "Gordita Light Italic";
   font-style: normal;
   font-weight: normal;
   src: local("Gordita Light Italic"), url("../../../public/assets/fonts/Gordita Light Italic.woff") format("woff");
 }
+
 @font-face {
   font-family: "Gordita Medium";
   font-style: normal;
   font-weight: normal;
   src: local("Gordita Medium"), url("../../../public/assets/fonts/Gordita Medium.woff") format("woff");
 }
+
 @font-face {
   font-family: "Gordita Medium Italic";
   font-style: normal;
   font-weight: normal;
   src: local("Gordita Medium Italic"), url("../../../public/assets/fonts/Gordita Medium Italic.woff") format("woff");
 }
+
 @font-face {
   font-family: "Gordita Bold";
   font-style: normal;
   font-weight: normal;
   src: local("Gordita Bold"), url("../../../public/assets/fonts/Gordita Bold.woff") format("woff");
 }
+
 @font-face {
   font-family: "Gordita Bold Italic";
   font-style: normal;
   font-weight: normal;
   src: local("Gordita Bold Italic"), url("../../../public/assets/fonts/Gordita Bold Italic.woff") format("woff");
 }
+
 @font-face {
   font-family: "Gordita Black";
   font-style: normal;
   font-weight: normal;
   src: local("Gordita Black"), url("../../../public/assets/fonts/Gordita Black.woff") format("woff");
 }
+
 @font-face {
   font-family: "Gordita Black Italic";
   font-style: normal;
   font-weight: normal;
   src: local("Gordita Black Italic"), url("../../../public/assets/fonts/Gordita Black Italic.woff") format("woff");
 }
+
 @font-face {
   font-family: "Gordita Ultra";
   font-style: normal;
   font-weight: normal;
   src: local("Gordita Ultra"), url("../../../public/assets/fonts/Gordita Ultra.woff") format("woff");
 }
+
 @font-face {
   font-family: "Gordita Ultra Italic";
   font-style: normal;
   font-weight: normal;
   src: local("Gordita Ultra Italic"), url("../../../public/assets/fonts/Gordita Ultra Italic.woff") format("woff");
 }
+
 /**
  * Basic typography style for copy text
  */
@@ -683,11 +708,13 @@ body {
 .title--size-big {
   font-size: 75px;
 }
+
 @media (max-width: 576px) {
   .title--size-big {
     font-size: 40px;
   }
 }
+
 @media (min-width: 577px) and (max-width: 869px) {
   .title--size-big {
     font-size: 60px;
@@ -702,14 +729,7 @@ body {
     opacity: 0;
   }
 }
-@-moz-keyframes fadeInOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
+
 @keyframes fadeInOut {
   0% {
     opacity: 1;
@@ -718,6 +738,7 @@ body {
     opacity: 0;
   }
 }
+
 /**
  * Clear inner floats
  */
@@ -787,10 +808,19 @@ body {
 }
 
 .vertical-center, .ry-spinner {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .full-height {
@@ -819,10 +849,18 @@ body {
 .ry-app--wrapper {
   width: 100%;
   min-height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
+
 @media (max-width: 576px) {
   .ry-app--wrapper {
     min-height: 400px;
@@ -830,20 +868,36 @@ body {
 }
 
 .row--items {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
+
 @media (max-width: 576px) {
   .row--items {
-    flex-direction: column;
-    justify-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     margin-top: -50px;
   }
 }
+
 @media (min-width: 577px) and (max-width: 869px) {
   .row--items {
-    flex-direction: column;
-    justify-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 }
 
@@ -854,27 +908,41 @@ body {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+
 .item--title:hover {
   text-decoration: none;
   background-color: transparent;
 }
 
 .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .item .item--title {
-  flex: 0.9;
+  -webkit-box-flex: 0.9;
+      -ms-flex: 0.9;
+          flex: 0.9;
 }
+
 @media (max-width: 576px) {
   .item .item--title {
-    flex: 0.9;
+    -webkit-box-flex: 0.9;
+        -ms-flex: 0.9;
+            flex: 0.9;
     font-size: 18px;
   }
 }
+
 @media (min-width: 577px) and (max-width: 869px) {
   .item .item--title {
-    flex: 0.9;
+    -webkit-box-flex: 0.9;
+        -ms-flex: 0.9;
+            flex: 0.9;
     font-size: 18px;
   }
 }
@@ -889,13 +957,19 @@ body {
   width: 100%;
   height: 3px;
   background-color: #ff5f5c;
+  -webkit-transition: -webkit-transform 0.4s ease-out;
+  transition: -webkit-transform 0.4s ease-out;
   transition: transform 0.4s ease-out;
-  transform: scaleX(0.3);
-  transform-origin: 0% 50%;
+  transition: transform 0.4s ease-out, -webkit-transform 0.4s ease-out;
+  -webkit-transform: scaleX(0.3);
+          transform: scaleX(0.3);
+  -webkit-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
 }
 
 .page--item:hover .page--item-indicator {
-  transform: scaleX(1);
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 
 .dots--container {
@@ -905,6 +979,7 @@ body {
   height: 400px;
   width: 400px;
 }
+
 @media (max-width: 576px) {
   .dots--container {
     margin: 0;
@@ -912,6 +987,7 @@ body {
     height: auto;
   }
 }
+
 @media (min-width: 577px) and (max-width: 869px) {
   .dots--container {
     margin: 0;
@@ -923,10 +999,14 @@ body {
 /* Button variables */
 /********************/
 .ry-button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   padding: 12px 16px;
   font-size: 14px;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-family: "Gordita Regular", "Manrope", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-weight: lighter;
   font-style: normal;
@@ -938,9 +1018,11 @@ body {
   cursor: pointer;
   margin: 2px;
 }
+
 .ry-button:active {
   background-color: #d9d9d9;
 }
+
 .ry-buttonhover {
   background-color: #f2f2f2;
 }
@@ -952,17 +1034,21 @@ body {
   height: 100px;
   border-radius: 100%;
   border: 2px solid black;
-  animation: infiniteRotate 2s infinite linear;
+  -webkit-animation: infiniteRotate 2s infinite linear;
+          animation: infiniteRotate 2s infinite linear;
 }
+
 .ry-spinner::before {
   content: "";
   position: absolute;
   width: 120%;
   background-color: white;
   height: 5px;
-  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
   z-index: 1;
 }
+
 .ry-spinner::after {
   content: "";
   position: absolute;
@@ -977,20 +1063,22 @@ body {
 }
 
 .loader-fade {
-  animation: fadeOut 1s ease-out;
+  -webkit-animation: fadeOut 1s ease-out;
+          animation: fadeOut 1s ease-out;
   opacity: 0;
 }
 
 .loading-message {
   position: absolute;
   font-size: 54px;
-  color: rgba(0, 0, 0, 0.1);
+  color: black;
   font-weight: bold;
   font-style: normal;
   margin: 50px;
   font-family: "Merriweather", serif;
   font-style: italic;
 }
+
 @media (max-width: 576px) {
   .loading-message {
     font-size: 25px;
@@ -999,57 +1087,54 @@ body {
 
 #percentage {
   z-index: 2;
-  animation: counterRotate 2s infinite linear;
+  -webkit-animation: counterRotate 2s infinite linear;
+          animation: counterRotate 2s infinite linear;
 }
 
 @-webkit-keyframes infiniteRotate {
   0% {
-    transform: rotate(0);
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
   }
   100% {
-    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
-@-moz-keyframes infiniteRotate {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
+
 @keyframes infiniteRotate {
   0% {
-    transform: rotate(0);
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
   }
   100% {
-    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
+
 @-webkit-keyframes counterRotate {
   0% {
-    transform: rotate(0);
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
   }
   100% {
-    transform: rotate(-360deg);
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
   }
 }
-@-moz-keyframes counterRotate {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(-360deg);
-  }
-}
+
 @keyframes counterRotate {
   0% {
-    transform: rotate(0);
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
   }
   100% {
-    transform: rotate(-360deg);
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
   }
 }
+
 @-webkit-keyframes fadeOut {
   0% {
     opacity: 1;
@@ -1058,14 +1143,7 @@ body {
     opacity: 0;
   }
 }
-@-moz-keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
+
 @keyframes fadeOut {
   0% {
     opacity: 1;
@@ -1074,6 +1152,7 @@ body {
     opacity: 0;
   }
 }
+
 /* Cursor custom variables */
 /********************/
 .cursor {
@@ -1082,10 +1161,14 @@ body {
   height: 35px;
   border-radius: 100%;
   border: 2px solid #222222;
-  transition-duration: 200ms;
-  transition-timing-function: ease-out;
-  animation: cursorScale 0.8s infinite alternate;
+  -webkit-transition-duration: 200ms;
+          transition-duration: 200ms;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+  -webkit-animation: cursorScale 0.8s infinite alternate;
+          animation: cursorScale 0.8s infinite alternate;
 }
+
 @media (max-width: 576px) {
   .cursor {
     display: none;
@@ -1094,48 +1177,62 @@ body {
 
 @-webkit-keyframes cursorScale {
   from {
-    transform: scale(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
   to {
-    transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
   }
 }
-@-moz-keyframes cursorScale {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(0.8);
-  }
-}
+
 @keyframes cursorScale {
   from {
-    transform: scale(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
   to {
-    transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
   }
 }
+
 .dots {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: 100%;
   width: 360px;
+  -webkit-transition: height flex-direction transform 0.3s;
   transition: height flex-direction transform 0.3s;
 }
+
 @media (max-width: 576px) {
   .dots {
     height: 30%;
-    flex-direction: row;
-    transform: scale(0.8) rotate(120deg) translate(5px, -136px);
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-transform: scale(0.8) rotate(120deg) translate(5px, -136px);
+            transform: scale(0.8) rotate(120deg) translate(5px, -136px);
   }
 }
+
 @media (min-width: 577px) and (max-width: 869px) {
   .dots {
     height: 30%;
-    flex-direction: row;
-    transform: scale(0.8) rotate(120deg) translate(5px, -136px);
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-transform: scale(0.8) rotate(120deg) translate(5px, -136px);
+            transform: scale(0.8) rotate(120deg) translate(5px, -136px);
   }
 }
 
@@ -1147,6 +1244,7 @@ body {
 .circle {
   border-radius: 50%;
 }
+
 .circle--shadow {
   position: absolute;
   opacity: 0.2;
@@ -1156,12 +1254,14 @@ body {
   width: 38px;
   height: 38px;
 }
+
 @media (max-width: 576px) {
   .small {
     width: 18px;
     height: 18px;
   }
 }
+
 @media (min-width: 577px) and (max-width: 869px) {
   .small {
     width: 28px;
@@ -1172,19 +1272,30 @@ body {
 .circle {
   pointer-events: none;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 1px;
   background-color: #222222;
   font-size: 14px;
 }
+
 @media (max-width: 576px) {
   .circle {
     font-size: 7px;
   }
 }
+
 @media (min-width: 577px) and (max-width: 869px) {
   .circle {
     font-size: 12px;
@@ -1193,27 +1304,23 @@ body {
 
 @-webkit-keyframes floating {
   from {
-    transform: translateY(-20px);
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
   }
   to {
-    transform: translateY(20px);
-  }
-}
-@-moz-keyframes floating {
-  from {
-    transform: translateY(-20px);
-  }
-  to {
-    transform: translateY(20px);
-  }
-}
-@keyframes floating {
-  from {
-    transform: translateY(-20px);
-  }
-  to {
-    transform: translateY(20px);
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
   }
 }
 
+@keyframes floating {
+  from {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+  to {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+}
 /*# sourceMappingURL=main.css.map */

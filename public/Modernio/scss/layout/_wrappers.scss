@@ -48,16 +48,13 @@
   max-width: 50%;
 }
 .modernio--background-1 {
-  background: linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 0.93) 0%,
-      rgba(0, 0, 0, 0) 100%
-    ),
-    url(../assets/images/red-bedroom.jpeg) no-repeat center center fixed;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%),
+    url(../assets/images/living-room.jpg) no-repeat center center fixed;
 
   // background: url(../assets/images/red-bedroom.jpeg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
+
   -o-background-size: cover;
   background-size: cover;
 }
@@ -105,8 +102,32 @@
   flex: 1;
 }
 
+.opinion--container {
+  display: flex;
+  margin-top: 5%;
+
+  justify-content: center;
+  align-items: center;
+}
+.profile--container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 300px;
+}
+.profile--container-left {
+  padding-left: 50px;
+}
+.opinion {
+  padding: 10px 50px;
+}
 .modernio--wrapper__furnitures {
   background-color: black;
+}
+
+.wrapper--quote {
+  background-color: $main-color;
 }
 
 @include keyframes(imageSize) {
@@ -116,4 +137,11 @@
   100% {
     transform: scale(1.2);
   }
+}
+
+.store--wrapper__products {
+  background-color: black;
+}
+.store--wrapper__description {
+  margin-top: 10%;
 }

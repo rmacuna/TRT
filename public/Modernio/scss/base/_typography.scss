@@ -72,6 +72,36 @@ body {
   font-family: "Gordita Regular";
 }
 
+.store--subtitle {
+  color: #fff;
+  margin-bottom: -10px;
+  font-family: "Gordita Medium", sans-serif;
+  font-size: 18px;
+}
+
+.store--title {
+  margin-top: 20px;
+  font-family: "Gordita Bold", sans-serif;
+  font-size: 68px;
+}
+
+.stats--title-quote {
+  font-size: 90px;
+  text-align: center;
+  color: white;
+}
+
+.opinion--title {
+  color: white;
+}
+.opinion--content {
+  font-family: "Gordita Regular Italic", sans-serif;
+  color: rgba(255, 255, 255, 0.8);
+}
+.title--color-alternative {
+  color: $alternative-color;
+}
+
 .title--width-medium {
   font-size: 140px;
 }

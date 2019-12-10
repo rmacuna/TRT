@@ -64,7 +64,9 @@
 .no-margin {
   margin: 0;
 }
-
+.extra--padding-top {
+  margin-top: 10%;
+}
 .centered-text {
   text-align: center;
 }
@@ -81,7 +83,10 @@
   justify-content: center;
   align-items: center;
 }
-
+.horizontal-center {
+  display: flex;
+  justify-content: center;
+}
 .full-height {
   min-height: 100vh;
 }

@@ -26,3 +26,18 @@
     }
   }
 }
+
+.input--black {
+  .label {
+    margin-top: 20px;
+    color: white;
+  }
+  input {
+    background-color: rgba(250, 250, 250, 0.1);
+
+    color: white;
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.7);
+    }
+  }
+}
