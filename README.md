@@ -10,8 +10,8 @@ You can use this template for free or commercial use. It's just a concept websit
 
 **Note**
 
-As a free template it still lack of some advanced features like a hamburger menu on mobile, a landscape responsive or a premium
-animated website. 
+As a free template it still lack of some advanced features like a hamburger menu on mobile, a landscape responsive or premium
+animations. 
 
 This is just a fancy design with common animations  😄
 
