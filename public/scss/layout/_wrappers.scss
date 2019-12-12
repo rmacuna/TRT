@@ -21,25 +21,39 @@
     justify-content: flex-start;
   }
 }
+
+.item--title {
+  font-size: 24px;
+  font-family: "Gordita Medium";
+  text-decoration: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  &:hover {
+    text-decoration: none;
+    background-color: transparent;
+  }
+}
+
 .item {
   display: flex;
   align-items: center;
-  h3 {
+  .item--title {
     flex: 0.9;
   }
   @include for-size(phone-only) {
-    h3 {
+    .item--title {
       flex: 0.9;
       font-size: 18px;
     }
   }
   @include DotsFails() {
-    h3 {
+    .item--title {
       flex: 0.9;
       font-size: 18px;
     }
   }
 }
+
 .page--item {
   cursor: pointer;
   position: relative;

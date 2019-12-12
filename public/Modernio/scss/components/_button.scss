@@ -1,0 +1,56 @@
+.ry__button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 100px;
+  font-family: "Gordita Medium", sans-serif;
+  font-size: 16px;
+  line-height: 1.5em;
+  transition: background-color 0.3s ease-out, color 0.3s ease-out;
+}
+
+.button--primary {
+  background-color: $main-color;
+  color: white;
+  &:hover {
+    background-color: darken($main-color, 10);
+  }
+}
+
+.button--light {
+  background-color: white;
+  color: black;
+}
+
+.button--tertiary {
+  background-color: $tertiary-color;
+  color: white;
+  &:hover {
+    background-color: darken($tertiary-color, 10);
+  }
+}
+.button--style-outline {
+  background: none;
+  border: 1px solid;
+}
+
+.button--light,
+.button--style-outline {
+  background-color: none;
+  border-color: white;
+  color: white;
+  &:hover {
+    background-color: white;
+    color: black;
+  }
+}
+
+.button--size-big {
+  padding: 18px 42px;
+  font-size: 14px;
+}
+
+.button--size-small {
+  padding: 12px 14px;
+  font-size: 14px;
+}

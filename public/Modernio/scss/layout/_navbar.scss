@@ -1,0 +1,104 @@
+nav.ry__navbar {
+  display: flex;
+  height: 120px;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0 50px;
+}
+
+.ry__hamburger--menu {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding-right: 20px;
+  .menu__line {
+    width: 14px;
+    height: 2px;
+    transform-origin: 0 100%;
+    background-color: white;
+    border-radius: 100px;
+    animation: expandLine 0.8s infinite alternate;
+  }
+  .menu__line--large {
+    transform-origin: 0 100%;
+    transform: scaleX(2.3);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    animation: expandLineLarge 0.4s infinite alternate;
+    animation-delay: 200ms;
+  }
+}
+
+.ry__navigation--container {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.ry__logo--container {
+  width: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ry__logo {
+  position: relative;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  margin-left: 40px;
+}
+
+.ry__navbar--items {
+  display: flex;
+  flex: 0.8;
+  margin: 0;
+  justify-content: flex-end;
+}
+
+.ry__navbar--item {
+  padding: 15px 47px;
+  display: flex;
+  align-items: center;
+  font-family: "Gordita Medium", sans-serif;
+  list-style: none;
+  font-size: 14px;
+  color: white;
+  cursor: pointer;
+}
+
+.icon--item {
+  padding-left: 10px;
+}
+
+@include keyframes(expandLine) {
+  0% {
+    transform: scaleX(1.3);
+  }
+
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@include keyframes(expandLineLarge) {
+  0% {
+    transform: scaleX(2.3);
+  }
+
+  100% {
+    transform: scaleX(1.5);
+  }
+}
+
+@include for-size(phone-only) {
+  .ry__navbar--items {
+    display: none;
+  }
+}
