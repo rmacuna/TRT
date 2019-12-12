@@ -96,3 +96,9 @@ nav.ry__navbar {
     transform: scaleX(1.5);
   }
 }
+
+@include for-size(phone-only) {
+  .ry__navbar--items {
+    display: none;
+  }
+}

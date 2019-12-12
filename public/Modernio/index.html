@@ -8,6 +8,7 @@
       src="https://kit.fontawesome.com/75c308835f.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="../../node_modules/aos/dist/aos.css" />
     <link rel="stylesheet" href="scss/main.css" />
     <title>Modernio</title>
   </head>
@@ -18,13 +19,8 @@
           id="animBackground"
           class="background--container-furnitureHd modernio--background-1"
         >
-          <!-- <div class="ry__sidebar--wrapper"></div> -->
-          <!-- Mobile Nav Only -->
-          <!-- <div></div> -->
-
-          <!-- Desktop navbar -->
-          <nav class="ry__navbar">
-            <div class="ry__hamburger--menu">
+          <nav class="ry__navbar modernio-anime ">
+            <div class="ry__hamburger--menu opaque anim-elem">
               <div class="menu__line"></div>
               <div class="menu__line menu__line--large"></div>
               <div class="menu__line"></div>
@@ -38,16 +34,16 @@
                 />
               </div>
               <ul class="ry__navbar--items">
-                <li class="ry__navbar--item">
+                <li class="ry__navbar--item opaque anim-elem">
                   Login
                 </li>
-                <li class="ry__navbar--item">
+                <li class="ry__navbar--item opaque anim-elem">
                   Register
                 </li>
-                <li class="ry__navbar--item">
+                <li class="ry__navbar--item opaque anim-elem">
                   Contact
                 </li>
-                <li class="ry__navbar--item ">
+                <li class="ry__navbar--item opaque anim-elem">
                   Buy
                   <i class="fas fa-shopping-cart icon--item"></i>
                 </li>
@@ -57,30 +53,40 @@
 
           <div class="container ">
             <div class="modernio--wrapper__dual">
-              <div class="modernio--wrapper__item wrapper__item-left">
-                <section class="modernio--description">
+              <div
+                class="modernio--wrapper__item wrapper__item-left modernio-anime"
+              >
+                <section class="modernio--description  ">
                   <h1
-                    class="modernio--title modernio--title-small__margin color--white"
+                    class="modernio--title modernio--title-small__margin color--white title-reveal"
                   >
                     Modern Furnitures
                   </h1>
-                  <p class="modernio--subtitle color--white">
+                  <p class="modernio--subtitle color--white title-reveal  ">
                     Find modern furnitures to make your house beautifull
                   </p>
-                  <button class="ry__button button--size-big button--primary">
+                  <button
+                    class="ry__button button--size-big button--primary anim-elem opaque"
+                  >
                     Go to the catalog
                   </button>
                 </section>
 
                 <div class="steper">
-                  <div class="steper--step steper--step-active">1</div>
-                  <div class="steper--step ">2</div>
+                  <div
+                    class="steper--step steper--step-active anim-elem opaque"
+                  >
+                    1
+                  </div>
+                  <div class="steper--step anim-elem opaque">2</div>
                 </div>
               </div>
               <div class="modernio--wrapper__item wrapper__item-right">
                 <div class="ry__card">
                   <section class="ry__card--header">
-                    <h4 class="header--subtitle color--main">Welcome</h4>
+                    <h4 class="header--subtitle color--main ">
+                      Welcome
+                    </h4>
                     <h1 class="header--title">
                       Create an account and get discounts
                     </h1>
@@ -152,9 +158,21 @@
         class="modernio--separator separator--size-big separator--color-black "
       >
         <section class="separator--stats">
-          <h4 class="stats--subtitle color--white">This year</h4>
-          <h1 class="stats--title stats--title-year">2019</h1>
-          <p class="stats--paragraph">
+          <h4 class="stats--subtitle color--white" data-aos="fade-up">
+            This year
+          </h4>
+          <h1
+            class="stats--title stats--title-year"
+            data-aos="zoom-in-up"
+            data-aos-delay="300"
+          >
+            2019
+          </h1>
+          <p
+            class="stats--paragraph"
+            data-aos="zoom-in-up"
+            data-aos-delay="600"
+          >
             This year we helped 200+ people to find the perfect design for their
             home. We are so grateful because you trust in us this year
           </p>
@@ -163,21 +181,42 @@
 
       <div class="modernio--wrapper modernio--wrapper__products">
         <div class="container">
-          <div class="modernio--wrapper__dual wrapper--margin-big">
+          <div
+            class="modernio--wrapper__dual wrapper--margin-big wrapper-concept"
+          >
             <div class="modernio--wrapper__item ">
-              <h1 class="modernio--title title--width-strech">
+              <h1
+                class="modernio--title title--width-strech"
+                data-aos="fade-up"
+                data-aos-offset="300"
+              >
                 The best of a design is the concept
               </h1>
-              <p class="paragraph paragraph--width-strech">
+              <p
+                class="paragraph paragraph--width-strech"
+                data-aos="fade-up"
+                data-aos-delay="300"
+                data-aos-offset="400"
+              >
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Numquam eaque et saepe nulla doloremque libero pariatur, animi
                 velit rem quod sint labore eligendi delectus natus quisquam hic
                 eveniet harum quos!
               </p>
-              <button class="ry__button button--primary button--size-big">
+              <button
+                class="ry__button button--primary button--size-big"
+                data-aos="zoom-in-down"
+                data-aos-offset="350"
+                data-aos-delay="450"
+              >
                 Get this product
               </button>
-              <h1 class="supertitle supertitle--color-opaque">
+              <h1
+                class="supertitle supertitle--color-opaque"
+                data-aos="fade-right"
+                data-aos-duration="500"
+                data-aos-offset="340"
+              >
                 Modern
               </h1>
             </div>
@@ -191,9 +230,11 @@
               /> -->
               <img
                 id="modernConcept"
+                data-aos="zoom-in-up"
+                data-aos-duration="1200"
                 class="image__home--size-responsive image--size-bigger "
                 src="assets/images/Modern_chair.png"
-                alt=""
+                alt="Chair"
               />
             </div>
           </div>
@@ -206,10 +247,19 @@
         <div class="container">
           <div class="modernio--wrapper__dual wrapper--margin-big">
             <div class="modernio--wrapper__item ">
-              <h1 class="modernio--title title--width-strech">
+              <h1
+                class="modernio--title title--width-strech "
+                data-aos="zoom-in-down"
+                data-aos-offset="350"
+              >
                 Have you ever dream a house like this?
               </h1>
-              <p class="paragraph paragraph--width-strech">
+              <p
+                class="paragraph paragraph--width-strech"
+                data-aos="zoom-in-down"
+                data-aos-offset="350"
+                data-aos-delay="300"
+              >
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Numquam eaque et saepe nulla doloremque libero pariatur, animi
                 velit rem quod sint labore eligendi delectus natus quisquam hic
@@ -220,6 +270,10 @@
             <div class="modernio--wrapper__item image--alignment-center">
               <img
                 id="oldConcept"
+                data-aos="fade-right"
+                data-aos-delay="300"
+                data-aos-duration="1000"
+                data-aos-offset="320"
                 class="image__home--size-responsive  "
                 src="assets/images/modern-house.jpg"
                 alt=""
@@ -234,28 +288,45 @@
           <section class="separator--stats">
             <h1
               class="stats--title title--width-medium centered-text color--white"
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+              data-aos-offset="350"
             >
               Want to have an indoor design?
             </h1>
-            <p class="stats--paragraph">
+            <p
+              class="stats--paragraph"
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+              data-aos-delay="300"
+            >
               We also have designers to make you dream house.
             </p>
           </section>
           <button
             class="ry__button button--light button--size-big button--style-outline "
+            data-aos="zoom-in"
+            data-aos-delay="500"
           >
             Ask for a design
           </button>
         </div>
       </div>
 
-      <div class="modernio--wrapper store--wrapper__products">
+      <div class="modernio--wrapper store--wrapper__opinions">
         <div class="container">
           <div class="ry__row">
             <div class="ry__col">
               <section class="store--wrapper__description vertical-center">
-                <h4 class="store--subtitle">Opinions</h4>
-                <h1 class="store--title title--color-alternative">
+                <h4 class="store--subtitle " data-aos="zoom-in">
+                  Opinions
+                </h4>
+                <h1
+                  data-aos="zoom-in"
+                  data-aos-offset="350"
+                  data-aos-delay="300"
+                  class="store--title title--color-alternative"
+                >
                   Modernio Work
                 </h1>
               </section>
@@ -265,6 +336,9 @@
           <div class="ry__row ">
             <div class="ry__col vertical-center separator__margin--right-10 ">
               <img
+                data-aos="fade-in-up"
+                data-aos-offset="400"
+                data-aos-duration="1000"
                 class="image__home--size-responsive "
                 src="assets/images/Decoration.png"
                 alt="Chairs"
@@ -272,6 +346,10 @@
             </div>
             <div class="ry__col vertical-center">
               <img
+                data-aos="fade-in-up"
+                data-aos-duration="1000"
+                data-aos-delay="300"
+                data-aos-offset="400"
                 class="image__home--size-responsive"
                 src="assets/images/living-room-2.jpg"
                 alt="Chairs"
@@ -280,8 +358,12 @@
           </div>
 
           <div class="ry__row">
-            <div class="opinion--container">
-              <section class="opinion">
+            <div
+              data-aos="zoom-in-right"
+              data-aos-offset="320"
+              class="opinion--container"
+            >
+              <section>
                 <h1 class="opinion--title ">Fantastic</h1>
                 <p class="opinion--content">
                   "Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -301,7 +383,12 @@
           </div>
 
           <div class="ry__row">
-            <div class="opinion--container">
+            <div
+              data-aos="zoom-in-right"
+              data-aos-offset="320"
+              data-aos-delay="300"
+              class="opinion--container"
+            >
               <div class="profile--container profile--container-left ">
                 <img
                   class="profile--image"
@@ -326,11 +413,25 @@
       <div class="modernio--separator wrapper--quote">
         <div class="container">
           <section class="separator--stats">
-            <h4 class="stats--subtitle color--white">Modernio</h4>
-            <h1 class="stats--title stats--title-quote">
+            <h4
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+              data-aos-offset="350"
+              class="stats--subtitle color--white"
+            >
+              Modernio
+            </h4>
+            <h1
+              data-aos="zoom-in"
+              data-aos-offset="350"
+              data-aos-delay="300"
+              class="stats--title stats--title-quote"
+            >
               We work for you , and you dream for us
             </h1>
             <button
+              data-aos="zoom-in"
+              data-aos-delay="600"
               class="ry__button button--light button--size-big button--style-outline extra--padding-top "
             >
               Contact us
@@ -379,7 +480,8 @@
       </div>
     </footer>
 
-    <script src="./../../node_modules/animejs/lib/anime.min.js"></script>
+    <script src="../../node_modules/aos/dist/aos.js"></script>
+    <script src="../../node_modules/animejs/lib/anime.min.js"></script>
     <script src="./js/animations.js"></script>
   </body>
 </html>

@@ -1,0 +1,18 @@
+.title-reveal {
+  animation: titleReveal 1s linear;
+}
+
+@include keyframes(titleReveal) {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(-20%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

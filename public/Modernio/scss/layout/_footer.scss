@@ -11,6 +11,9 @@
 }
 .footer--nav {
   padding-left: 100px;
+  @include for-size(phone-only) {
+    padding-left: 0;
+  }
 }
 .footer--subtitle {
   font-size: 15px;

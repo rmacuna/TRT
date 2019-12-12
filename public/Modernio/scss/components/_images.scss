@@ -10,6 +10,10 @@
 .image--size-bigger {
   max-width: 120%;
   width: 120%;
+  @include for-size(phone-only) {
+    max-width: 100%;
+    width: 100%;
+  }
 }
 .image--alignment-center {
   display: flex;
@@ -25,4 +29,7 @@
 
   margin-left: auto;
   margin-right: auto;
+  @include for-size(phone-only) {
+    max-width: 50%;
+  }
 }

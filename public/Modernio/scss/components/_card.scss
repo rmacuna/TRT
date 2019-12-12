@@ -9,6 +9,9 @@
   min-height: 550px;
   width: 500px;
   margin-right: -50px;
+  @include for-size(phone-only) {
+    margin-right: 0;
+  }
 }
 
 .ry__card--header {

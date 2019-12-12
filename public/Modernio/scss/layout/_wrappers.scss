@@ -59,13 +59,8 @@
   background-size: cover;
 }
 .modernio--background-2 {
-  background: linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 0.93) 0%,
-      rgba(0, 0, 0, 0) 100%
-    ),
-    url("../assets/images/modern_minimal_design.jpg") no-repeat center center
-      fixed;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.93) 0%, rgba(0, 0, 0, 0) 100%),
+    url("../assets/images/modern_minimal_design.jpg") no-repeat center center fixed;
 
   // background: url(../assets/images/red-bedroom.jpeg) no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -88,13 +83,26 @@
 
 .modernio--wrapper__dual {
   display: flex;
+  @include for-size(phone-only) {
+    flex-direction: column;
+  }
 }
+
+.image--alignment-center {
+  @include for-size(phone-only) {
+    margin-bottom: 20%;
+  }
+}
+
 .modernio--wrapper__item {
   padding-top: 40px;
 }
 
 .wrapper__item-left {
   flex: 1;
+  @include for-size(phone-only) {
+    max-width: 100%;
+  }
 }
 .wrapper__item-right {
   display: flex;
@@ -108,6 +116,9 @@
 
   justify-content: center;
   align-items: center;
+  @include for-size(phone-only) {
+    flex-direction: column;
+  }
 }
 .profile--container {
   display: flex;
@@ -118,6 +129,9 @@
 }
 .profile--container-left {
   padding-left: 50px;
+  @include for-size(phone-only) {
+    padding-left: 0;
+  }
 }
 .opinion {
   padding: 10px 50px;
@@ -139,8 +153,9 @@
   }
 }
 
-.store--wrapper__products {
+.store--wrapper__opinions {
   background-color: black;
+  padding-top: 15%;
 }
 .store--wrapper__description {
   margin-top: 10%;
