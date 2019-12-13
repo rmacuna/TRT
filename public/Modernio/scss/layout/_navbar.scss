@@ -1,10 +1,18 @@
+$default-navbar-height: 120px;
+$default-navbar-padding: 0 50px;
+
+$logo-size: 90px;
+
+$nav-item-padding: 15px 47px;
+$nav-item-font-size: 14px;
+
 nav.ry__navbar {
   display: flex;
-  height: 120px;
+  height: $default-navbar-height;
   width: 100%;
   max-width: 100%;
   overflow: hidden;
-  padding: 0 50px;
+  padding: $default-navbar-padding;
 }
 
 .ry__hamburger--menu {
@@ -40,7 +48,7 @@ nav.ry__navbar {
 }
 
 .ry__logo--container {
-  width: 90px;
+  width: $logo-size;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -63,12 +71,12 @@ nav.ry__navbar {
 }
 
 .ry__navbar--item {
-  padding: 15px 47px;
+  padding: $nav-item-padding;
   display: flex;
   align-items: center;
   font-family: "Gordita Medium", sans-serif;
   list-style: none;
-  font-size: 14px;
+  font-size: $nav-item-font-size;
   color: white;
   cursor: pointer;
 }

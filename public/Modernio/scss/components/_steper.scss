@@ -1,6 +1,10 @@
+$default-steper-margin-top: 80px;
+$default-steper-radius: 100%;
+$default-steper-font-size: 14px;
+
 .steper {
   position: relative;
-  margin-top: 80px;
+  margin-top: $default-steper-margin-top;
   display: flex;
 }
 
@@ -8,10 +12,10 @@
   width: 50px;
   height: 50px;
   border: 1px solid white;
-  border-radius: 100%;
+  border-radius: $default-steper-radius;
 
   color: white;
-  font-size: 14px;
+  font-size: $default-steper-font-size;
   font-family: "Gordita Bold", sans-serif;
 
   display: flex;

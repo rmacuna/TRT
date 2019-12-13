@@ -1,5 +1,7 @@
+$title-reveal-time: 1s;
+
 .title-reveal {
-  animation: titleReveal 1s linear;
+  animation: titleReveal $title-reveal-time linear;
 }
 
 @include keyframes(titleReveal) {

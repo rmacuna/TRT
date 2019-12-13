@@ -64,6 +64,13 @@
 .no-margin {
   margin: 0;
 }
+
+.margin--right__negative-50 {
+  margin-right: -50px;
+  @include for-size(phone-only) {
+    margin-right: 0;
+  }
+}
 .extra--padding-top {
   margin-top: 10%;
 }

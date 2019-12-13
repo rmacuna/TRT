@@ -1,11 +1,20 @@
+$default-radius: 100px;
+$default-font-size: 16px;
+$default-line-height: 1.5em;
+
+$button-outline-width: 1px;
+
+$button-size-big: 18px 42px;
+$button-size-small: 12px 14px;
+
 .ry__button {
   outline: none;
   border: none;
   cursor: pointer;
-  border-radius: 100px;
+  border-radius: $default-radius;
   font-family: "Gordita Medium", sans-serif;
-  font-size: 16px;
-  line-height: 1.5em;
+  font-size: $default-font-size;
+  line-height: $default-line-height;
   transition: background-color 0.3s ease-out, color 0.3s ease-out;
 }
 
@@ -31,7 +40,7 @@
 }
 .button--style-outline {
   background: none;
-  border: 1px solid;
+  border: $button-outline-width solid;
 }
 
 .button--light,
@@ -46,11 +55,11 @@
 }
 
 .button--size-big {
-  padding: 18px 42px;
+  padding: $button-size-big;
   font-size: 14px;
 }
 
 .button--size-small {
-  padding: 12px 14px;
+  padding: $button-size-small;
   font-size: 14px;
 }

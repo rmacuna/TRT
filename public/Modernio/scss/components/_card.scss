@@ -1,72 +1,54 @@
+$default-card-margin: 2px;
+$default-card-min-height: 500px;
+$default-card-width: 500px;
+$default-card-padding: 5px;
+
+$card-header-padding: 12px 20px;
+$card-body-padding: 12px 20px;
+$card-footer-padding: 25px 20px;
+$header-title-size: 24px;
+
+$header-subtitle-size: 14px;
+
 .ry__card {
   position: relative;
-  margin: 2px;
+  margin: $default-card-margin;
   background-color: white;
   display: flex;
   flex-direction: column;
-  padding: 5px;
+  padding: $default-card-padding;
   max-width: 100%;
-  min-height: 550px;
-  width: 500px;
-  margin-right: -50px;
-  @include for-size(phone-only) {
-    margin-right: 0;
-  }
+  min-height: $default-card-min-height;
+  width: $default-card-width;
 }
 
 .ry__card--header {
   display: flex;
   flex-direction: column;
   flex: 0 1 auto;
-  padding: 12px 20px;
+  padding: $card-header-padding;
 }
 
 .header--title {
   font-family: "Gordita Medium", sans-serif;
-  font-size: 24px;
+  font-size: $header-title-size;
   max-width: 280px;
   margin-top: -15px;
   line-height: 127.1%;
 }
 .header--subtitle {
   font-family: "Gordita Medium", sans-serif;
-  font-size: 14px;
+  font-size: $header-subtitle-size;
   max-width: 280px;
 }
 .ry__card--body {
   display: flex;
   flex-direction: column;
-  padding: 12px 20px;
+  padding: $card-body-padding;
 }
 
 .ry__card--footer {
   display: flex;
-  padding: 25px 20px;
+  padding: $card-footer-padding;
   justify-content: flex-end;
 }
-
-// .offer__image {
-//   max-width: 100%;
-//   width: 250px;
-//   height: auto;
-//   margin-left: auto;
-//   margin-right: auto;
-//   animation: floating 1s infinite alternate;
-//   margin-top: -100px;
-// }
-
-// .banner__offer {
-//   font-family: "Gordita Medium";
-//   font-size: 18px;
-//   margin-bottom: 4px;
-// }
-
-// @include keyframes(floating) {
-//   0% {
-//     transform: translateY(-10px);
-//   }
-
-//   100% {
-//     transform: translateY(10px);
-//   }
-// }

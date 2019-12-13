@@ -868,6 +868,16 @@ body {
   margin: 0;
 }
 
+.margin--right__negative-50 {
+  margin-right: -50px;
+}
+
+@media (max-width: 576px) {
+  .margin--right__negative-50 {
+    margin-right: 0;
+  }
+}
+
 .extra--padding-top {
   margin-top: 10%;
 }
@@ -1533,15 +1543,8 @@ nav.ry__navbar {
           flex-direction: column;
   padding: 5px;
   max-width: 100%;
-  min-height: 550px;
+  min-height: 500px;
   width: 500px;
-  margin-right: -50px;
-}
-
-@media (max-width: 576px) {
-  .ry__card {
-    margin-right: 0;
-  }
 }
 
 .ry__card--header {
