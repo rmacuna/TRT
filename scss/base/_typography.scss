@@ -1,0 +1,51 @@
+/**
+ * Basic typography style for copy text
+ */
+body {
+  color: $text-color;
+  font: normal 125% / 1.4 $text-font-stack;
+  font-weight: normal;
+}
+
+.title {
+  font-family: "Gordita Bold", sans-serif;
+  color: $text-color;
+}
+
+.app--title {
+  font-family: "Gordita Medium", sans-serif;
+  position: absolute;
+  left: 0;
+  margin-left: 12px;
+  right: 0;
+
+  padding-top: 50px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.light-text {
+  color: white;
+}
+
+.title--width-reduced {
+  max-width: 570px;
+}
+.title--size-big {
+  font-size: 75px;
+  @include for-size(phone-only) {
+    font-size: 40px;
+  }
+  @include DotsFails() {
+    font-size: 60px;
+  }
+}
+
+@include keyframes(fadeInOut) {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
