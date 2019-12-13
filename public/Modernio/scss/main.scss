@@ -1,0 +1,29 @@
+@charset 'UTF-8';
+
+// Configuration and helpers
+@import "abstracts/variables";
+
+@import "abstracts/functions";
+@import "abstracts/mixins";
+
+// 2. Vendors
+@import "vendors/normalize";
+
+// 3. Base stuff
+@import "base/base";
+@import "base/fonts";
+@import "base/typography";
+@import "base/helpers";
+
+// 4. Layout-related sections
+@import "layout/navbar";
+@import "layout/footer";
+@import "layout/wrappers";
+@import "layout/grid";
+// 5. Components
+@import "components/button";
+@import "components/card";
+@import "components/steper";
+@import "components/input";
+@import "components/images";
+@import "components/animations";

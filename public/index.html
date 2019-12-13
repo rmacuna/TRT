@@ -15,7 +15,7 @@
   <!-- Feel free to modify this template if you want.  -->
 
   <body class="body no-scroll">
-    <div class="cursor"></div>
+    <!-- <div class="cursor"></div> -->
 
     <!-- First loader -->
     <!-- <div id="modal-loader" class="container vertical-center full-height">
@@ -60,8 +60,10 @@
       </section>
       <div class="row--items function--row-animated">
         <div class="page--item opaque el">
-          <div class="item">
-            <h3>Page number one</h3>
+          <div onclick="navigate()" class="item">
+            <a class="item--title" href="Modernio/index.html"
+              >Modernio Website</a
+            >
             <i class="fas fa-arrow-right"></i>
           </div>
 
@@ -69,14 +71,18 @@
         </div>
         <div class="page--item opaque el ">
           <div class="item">
-            <h3>Page number two</h3>
+            <a class="item--title" href="Modernio/index.html"
+              >Website number two</a
+            >
             <i class="fas fa-arrow-right"></i>
           </div>
           <span class="page--item-indicator"></span>
         </div>
         <div class="page--item opaque el">
           <div class="item">
-            <h3>Page number three</h3>
+            <a class="item--title" href="Modernio/index.html"
+              >Website number three</a
+            >
             <i class="fas fa-arrow-right"></i>
           </div>
           <span class="page--item-indicator"></span>
@@ -84,7 +90,16 @@
       </div>
     </div>
 
-    <aside class="border-colored"></aside>
+    <aside class="border-colored">
+      <div class="container ">
+        <a
+          class="text--color-white"
+          target="_blank"
+          href="https://github.com/rmacuna/TRT"
+          >Github Project Link</a
+        >
+      </div>
+    </aside>
 
     <script src="../node_modules/animejs/lib/anime.min.js"></script>
     <script src="./js/animations.js"></script>

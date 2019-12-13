@@ -486,6 +486,7 @@ a:hover, a:active, a:focus {
   bottom: 0;
   left: 0;
   animation: slideIn 0.3s linear;
+  padding: 20px;
 }
 
 @-webkit-keyframes slideIn {
@@ -512,6 +513,10 @@ a:hover, a:active, a:focus {
     transform: scaleX(1) translateY(0);
   }
 }
+.text--color-white {
+  color: #fff;
+}
+
 /*
 
   Manrope it's a free-font, I'm going to attributethe author.
@@ -805,6 +810,12 @@ body {
   opacity: 0;
 }
 
+.ry__footer {
+  max-width: 100%;
+  background-color: black;
+  min-height: 300px;
+}
+
 .ry-app--wrapper {
   width: 100%;
   min-height: 500px;
@@ -836,21 +847,33 @@ body {
   }
 }
 
+.item--title {
+  font-size: 24px;
+  font-family: "Gordita Medium";
+  text-decoration: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.item--title:hover {
+  text-decoration: none;
+  background-color: transparent;
+}
+
 .item {
   display: flex;
   align-items: center;
 }
-.item h3 {
+.item .item--title {
   flex: 0.9;
 }
 @media (max-width: 576px) {
-  .item h3 {
+  .item .item--title {
     flex: 0.9;
     font-size: 18px;
   }
 }
 @media (min-width: 577px) and (max-width: 869px) {
-  .item h3 {
+  .item .item--title {
     flex: 0.9;
     font-size: 18px;
   }

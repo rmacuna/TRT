@@ -1,0 +1,57 @@
+$default-footer-padding: 80px 40px;
+$default-footer-height: 600px;
+$default-footer-color: black;
+
+$footer-title-size: 40px;
+$footer-subtitle-size: 15px;
+
+$footer-navigation-items-color: rgba(250, 250, 250, 0.5);
+
+.ry__footer {
+  max-width: 100%;
+  background-color: $default-footer-color;
+  padding: $default-footer-padding;
+  min-height: $default-footer-height;
+}
+
+.footer--title {
+  font-size: $footer-title-size;
+  font-family: "Gordita Medium", sans-serif;
+}
+.footer--nav {
+  padding-left: 100px;
+  @include for-size(phone-only) {
+    padding-left: 0;
+  }
+}
+.footer--subtitle {
+  font-size: $footer-subtitle-size;
+  font-family: "Gordita Regular", sans-serif;
+  color: white;
+  margin-top: -20px;
+}
+
+.footer--card-subscription {
+  flex: 0.4;
+}
+
+.footer--items {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  li {
+    list-style: none;
+    color: $footer-navigation-items-color;
+    padding: 16px 20px;
+    cursor: pointer;
+    margin: 0;
+    transition: color 0.3s ease-out;
+    &:hover {
+      color: white;
+    }
+  }
+}
+.footer--container {
+  border-bottom: 1px solid white;
+}
